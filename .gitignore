@@ -2,3 +2,5 @@ aoc01/target
 aoc02/target
 /target/
 target/**
+/target/
+**/target/

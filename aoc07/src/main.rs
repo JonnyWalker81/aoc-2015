@@ -11,7 +11,6 @@ fn main() -> Result<()> {
     io::stdin().read_to_string(&mut input)?;
 
     part1(&input)?;
-    // part2(&input)?;
 
     Ok(())
 }
@@ -83,8 +82,6 @@ impl Circuit {
                 } else {
                     self.get_value(&x)
                 };
-                // let x_val = get_value(instructions, circuit, &x);
-                // let y_val = get_value(instructions, circuit, &y);
                 let y_val = if let Ok(y) = y.parse() {
                     y
                 } else {
@@ -99,13 +96,11 @@ impl Circuit {
                 } else {
                     self.get_value(&x)
                 };
-                // let x_val = get_value(instructions, circuit, &x);
                 let y_val = if let Ok(y) = y.parse() {
                     y
                 } else {
                     self.get_value(&y)
                 };
-                // let y_val = get_value(instructions, circuit, &y);
                 let and_val = x_val & y_val;
                 and_val
             }
@@ -149,8 +144,5 @@ fn part1(input: &str) -> Result<()> {
     let val = circuit.get_value("a");
     println!("A: {}", val);
 
-    // if let Some(a) = circuit.memory.get("a") {
-    //     println!("Memory: {:?}", a);
-    // }
     Ok(())
 }

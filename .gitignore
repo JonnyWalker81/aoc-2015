@@ -4,3 +4,7 @@ aoc02/target
 target/**
 /target/
 **/target/
+aoc05/.idea
+aoc05/.DS_Store
+aoc07/.idea
+.DS_Store

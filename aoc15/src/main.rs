@@ -7,38 +7,6 @@ fn main() -> Result<()> {
     Ok(())
 }
 
-// struct Ingrediant {
-//     name: String,
-//     capacity: i64,
-//     durability: i64,
-//     flavor: i64,
-//     texture: i64,
-//     calories: i64,
-// }
-//
-// impl Ingrediant {}
-//
-// impl From<&str> for Ingrediant {
-//     fn from(item: &str) -> Self {
-//         let parts: Vec<&str> = item.split_whitespace().collect();
-//         let name = parts[0].to_string();
-//         let capacity = parts[2].trim_end_matches(',').parse().unwrap();
-//         let durability = parts[4].trim_end_matches(',').parse().unwrap();
-//         let flavor = parts[6].trim_end_matches(',').parse().unwrap();
-//         let texture = parts[8].trim_end_matches(',').parse().unwrap();
-//         let calories = parts[10].parse().unwrap();
-//
-//         Self {
-//             name,
-//             capacity,
-//             durability,
-//             flavor,
-//             texture,
-//             calories,
-//         }
-//     }
-// }
-//
 fn part1() -> Result<()> {
     let mut max_score = 0;
     for sugar in 0..100 {

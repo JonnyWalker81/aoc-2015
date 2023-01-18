@@ -1,9 +1,4 @@
-use std::{
-    cell::RefCell,
-    collections::{HashMap, HashSet},
-    io::{self, Read},
-    mem,
-};
+use std::io::{self, Read};
 
 type Result<T> = ::std::result::Result<T, Box<dyn ::std::error::Error>>;
 
@@ -103,10 +98,8 @@ fn count_chars(line: &str) -> (i32, i32) {
                             code_count += 3;
                             memory_count += 1;
                             peek_chars.next();
-                            let x = peek_chars.next().unwrap();
-                            let y = peek_chars.next().unwrap();
-                            let hex_str = format!("{}{}", x, y);
-                            let hex = u32::from_str_radix(&hex_str, 16).unwrap();
+                            peek_chars.next();
+                            peek_chars.next();
                         }
                         _ => panic!("should not get here: {}", pc),
                     }

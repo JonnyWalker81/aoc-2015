@@ -1,7 +1,4 @@
-use std::{
-    collections::HashMap,
-    io::{self, Read},
-};
+use std::io::{self, Read};
 
 use itertools::Itertools;
 
